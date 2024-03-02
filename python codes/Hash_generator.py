@@ -35,12 +35,12 @@ def calculate_pdf_hash(file_path):
   return calculated_hash
 
 # Example usage (replace with your actual file path)
-file_path = (r"C:\Users\Anirudha\Downloads\arr.pdf") 
+file_path = (r"C:\Users\Anirudha\Downloads\test.jpg") 
 
 stored_hash = calculate_pdf_hash(file_path)
 
 if stored_hash:
   print("Calculated hash:", stored_hash)
-  # Store this hash value securely for future integrity checks
+  # We need to store this hash value securely for future integrity checks
 else:
   print("Error generating hash.")
