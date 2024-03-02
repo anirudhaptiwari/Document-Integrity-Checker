@@ -34,14 +34,14 @@ def check_pdf_integrity(file_path, stored_hash):
     return False
 
   if calculated_hash == stored_hash:
-    print("The PDF file is intact.")
+    print("The Document is intact.")
     return True
   else:
-    print("The PDF file has been modified.")
+    print("The Document has been modified.")
     return False
 
 # Example usage (replace with your actual file path and hash)
-file_path = (r"C:\Users\Anirudha\Downloads\arr.pdf")
-stored_hash = "b9c31401d6bfd58042faf5185ac0fef642d0015893e571e08c56951cd25e71f5"
+file_path = (r"C:\Users\Anirudha\Downloads\test.jpg")
+stored_hash = "a39c4520131dd8feee818889cd57ef47af6ec4cfa76e8c98c619c408fc09c684"
 
 check_pdf_integrity(file_path, stored_hash)
