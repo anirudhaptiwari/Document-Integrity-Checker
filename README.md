@@ -1,2 +1,2 @@
-# Mini-Project
-College Mini Project
+# Document Integrity Checker
+
