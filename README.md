@@ -22,10 +22,26 @@ This Flask-based web application allows users to check the integrity of any PDF 
 
 1. **Clone the repository**: Clone this repository to your local machine using the command:
 ```bash
-git clone 
+git clone https://github.com/anirudhaptiwari/Document-Integrity-Checker.git
+```
 
-2. Navigate to the directory containing the script.
-3. Run the script using Python.
+2. **Navigate to the directory containing the script**: Use the command:
+   ```bash
+   cd <project_directory>
+   ```
+3. **Create a virtual environment**: It’s a good practice to create a virtual environment for your Python projects. You can do this using the venv module:
+   ```bash
+   python3 -m venv env
+   ```
+4.**Activate the virtual environment**: The command to activate the virtual environment depends on your operating system:
+```bash
+On Windows, use: .\env\Scripts\activate
+On Unix or MacOS, use: source env/bin/activate
+```
+5.**Install the dependencies**: The project requires Flask and its dependencies. You can install them using pip:
+```bash
+pip install flask
+```
 
 ```python
 # Example usage (replace with your actual file path)
