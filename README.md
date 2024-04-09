@@ -18,8 +18,12 @@ This Flask-based web application allows users to check the integrity of any PDF 
 - CSS
 - JavaScript
 
-## Installation and Usage
-1. Clone this repository to your local machine.
+## Installation
+
+1. **Clone the repository**: Clone this repository to your local machine using the command:
+```bash
+git clone 
+
 2. Navigate to the directory containing the script.
 3. Run the script using Python.
 
