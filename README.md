@@ -25,14 +25,14 @@ This Flask-based web application allows users to check the integrity of any PDF 
 git clone https://github.com/anirudhaptiwari/Document-Integrity-Checker.git
 ```
 
-2. **Navigate to the directory containing the script using the command**
-   ```bash
-   cd <project_directory>
-   ```
+2. **Navigate to the project directory**:Use the command:
+```bash
+cd <project_directory>
+```
 3. **Create a virtual environment**: It’s a good practice to create a virtual environment for your Python projects use:
-   ```bash
-   python3 -m venv env
-   ```
+```bash
+python3 -m venv env
+```
 4.**Activate the virtual environment**: The command to activate the virtual environment depends on your operating system:
 **On Windows use**
 ```bash
