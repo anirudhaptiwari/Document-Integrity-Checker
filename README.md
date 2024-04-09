@@ -34,6 +34,7 @@ cd <project_directory>
 python3 -m venv env
 ```
 4.**Activate the virtual environment**: The command to activate the virtual environment depends on your operating system:
+
 **On Windows use**
 ```bash
 .\env\Scripts\activate
