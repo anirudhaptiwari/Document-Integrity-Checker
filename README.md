@@ -1,12 +1,22 @@
 # Document Integrity Checker
 
 ## Description
-This project provides a simple way to check the integrity of any document. It uses SHA-256 hashing algorithm to calculate the hash of the original document and then compares it with the hash of the document at any later point. If the hashes match, the document is deemed intact; if they don't, the document has been modified.
+This Flask-based web application allows users to check the integrity of any PDF document. It uses the SHA-256 hashing algorithm to calculate a unique hash for each uploaded document. Later, it can compare the calculated hash of the document with the stored hash to check if the document has been modified.
+
+## Features
+- User Authentication
+- File Upload
+- Hash Generation
+- Integrity Check
 
 ## Technologies Used
 - Python
+- Flask
 - hashlib
 - os
+- HTML
+- CSS
+- JavaScript
 
 ## Installation and Usage
 1. Clone this repository to your local machine.
