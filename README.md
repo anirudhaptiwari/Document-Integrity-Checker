@@ -29,7 +29,7 @@ git clone https://github.com/anirudhaptiwari/Document-Integrity-Checker.git
 ```bash
 cd Document-Integrity-Checker
 ```
-3. **Create a virtual environment**: It’s a good practice to create a virtual environment for your Python projects use:
+<!--3. **Create a virtual environment**: It’s a good practice to create a virtual environment for your Python projects use:
 ```bash
 python3 -m venv env
 ```
@@ -41,9 +41,9 @@ python3 -m venv env
 ```
 **On Unix or MacOS use**
 ```bash
-source env/bin/activate
-```
-5.**Install the dependencies**: The project requires Flask and its dependencies. You can install them using pip:
+source env/bin/activate 
+```                     -->
+3.**Install the dependencies**: The project requires Flask and its dependencies. You can install them using pip:
 ```bash
 pip install flask
 ```
@@ -55,9 +55,9 @@ python app.py
 ```
 This will start the Flask development server.
 
-**Access the application**: Open web browser and navigate to http://localhost:5000. This will take you to the login page of the application.
+2. **Access the application**: Open web browser and navigate to http://localhost:5000. This will take you to the login page of the application.
 
-**Use the application**: From the login page, you can log in to the application (the default username and password are both ‘admin’). Once logged in, you can choose to either generate a hash for a new document or check the integrity of an existing document.
+3. **Use the application**: From the login page, you can log in to the application (the default username and password are both ‘admin’). Once logged in, you can choose to either generate a hash for a new document or check the integrity of an existing document.
 
 
 ## Contribution
