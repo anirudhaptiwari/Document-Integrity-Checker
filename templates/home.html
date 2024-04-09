@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome, admin!</h2>
+    <form action="" method="post" class="container">
+        <input class="input-btn" type="radio" id="valueIs-1" name="action" checked="" value="generate">
+        <label class="neon-btn" for="valueIs-1">
+            <span class="span"></span>
+            <span class="txt">Generate Hash</span>
+        </label>
+
+        <input class="input-btn" type="radio" id="valueIs-2" name="action" value="check">
+        <label class="neon-btn" for="valueIs-2">
+            <span class="span"></span>
+            <span class="txt">Check Integrity</span>
+        </label>
+
+        <div class="input-group">
+            <button class="submit-button"><span>Submit</span></button>
+        </div>
+    </form>
+</body>
+</html>
