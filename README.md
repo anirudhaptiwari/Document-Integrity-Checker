@@ -55,7 +55,8 @@ python app.py
 ```
 This will start the Flask development server.
 
-**Access the application**: Open your web browser and navigate to http://localhost:5000. This will take you to the login page of the application.
+**Access the application**: Open web browser and navigate to http://localhost:5000. This will take you to the login page of the application.
+
 **Use the application**: From the login page, you can log in to the application (the default username and password are both ‘admin’). Once logged in, you can choose to either generate a hash for a new document or check the integrity of an existing document.
 
 
