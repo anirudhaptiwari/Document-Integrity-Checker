@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        .hash {
+            color: white;
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .back-home {
+            text-align: left;
+            margin-top: 50px; /* Add space above the Back to Home button */
+        }
+    </style>
+    <script>
+        function copyHash() {
+            /* Get the text field */
+            var copyText = document.getElementById("hash");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            alert("Copied the hash: " + copyText.value);
+        }
+    </script>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div class="input-group">
+            <input type="text" name="unique_name" id="input-field" placeholder="Unique Name">
+        </div>
+        <div class="input-group">
+            <input type="file" name="file" id="input-field">
+        </div>
+        <div class="input-group">
+            <button class="submit-button"><span>Upload</span></button>
+        </div>
+    </form>
+    {% if calculated_hash %}
+    <p class="hash"><strong>Calculated Hash:</strong> <input type="text" value="{{ calculated_hash }}" id="hash"><button onclick="copyHash()">Copy</button></p>
+    {% endif %}
+    <div class="input-group back-home">
+        <a href="{{ url_for('home') }}" class="submit-button"><span>Back to Home</span></a>
+    </div>
+</body>
+</html>
