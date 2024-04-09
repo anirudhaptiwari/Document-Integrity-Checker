@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Integrity</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        .hash {
+            color: white;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .back-home {
+            text-align: left;
+            margin-bottom: 50px; /* Add space below the Back to Home button */
+        }
+        .result {
+            color: green;
+            text-align: center; /* Center the result text */
+            font-size: 20px; /* Increase the font size */
+            font-weight: bold; /* Make the text bold */
+        }
+        .error {
+            color: red;
+            text-align: center; /* Center the error text */
+            font-size: 20px; /* Increase the font size */
+            font-weight: bold; /* Make the text bold */
+        }
+    </style>
+</head>
+<body>
+    <h2>Check Integrity</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div class="input-group">
+            <input type="text" name="unique_name" id="input-field" placeholder="Unique Name (optional)">
+        </div>
+        <div class="input-group">
+            <input type="text" name="hash_value" id="input-field" placeholder="Hash Value (optional)">
+        </div>
+        <div class="input-group">
+            <input type="file" name="file" id="input-field">
+        </div>
+        <div class="input-group">
+            <button class="submit-button"><span>Check Integrity</span></button>
+        </div>
+    </form>
+    <div class="input-group back-home">
+        <a href="{{ url_for('home') }}" class="submit-button"><span>Back to Home</span></a>
+    </div>
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% elif is_intact is not none %}
+    <p class="result"><strong>Result:</strong> {{ 'The Document is intact.' if is_intact else 'The Document has been modified.' }}</p>
+    {% endif %}
+</body>
+</html>
