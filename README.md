@@ -27,7 +27,7 @@ git clone https://github.com/anirudhaptiwari/Document-Integrity-Checker.git
 
 2. **Navigate to the project directory**:Use the command:
 ```bash
-cd <project_directory>
+cd Document-Integrity-Checker
 ```
 3. **Create a virtual environment**: It’s a good practice to create a virtual environment for your Python projects use:
 ```bash
