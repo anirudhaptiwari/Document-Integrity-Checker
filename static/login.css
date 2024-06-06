@@ -40,13 +40,14 @@ button:hover::after, button:hover::before {
   font-weight: bold;
   display: flex;
   margin: auto;
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9;*/ 
   align-items: center;
   justify-items: center;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 1em;
+  height: 90vh;
 }
 
 .input-container {
@@ -195,4 +196,12 @@ button:hover::after, button:hover::before {
   to {
     filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
   }
+}
+
+/*following css is used to add copywrite in login page */
+.copyright{
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
 }
