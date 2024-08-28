@@ -1,70 +1,111 @@
 # Document Integrity Checker
 
 ## Description
+
 This Flask-based web application allows users to check the integrity of any document. It uses the SHA-256 hashing algorithm to calculate a unique hash for each uploaded document. Later, it can compare the calculated hash of the document with the stored hash to check if the document has been modified.
 
 ## Features
+
 - User Authentication
 - File Upload
 - Hash Generation
 - Integrity Check
 
 ## Technologies Used
+
 - Python
 - Flask
+- PostgreSQL
+- SQLAlchemy
 - hashlib
-- os
 - HTML
 - CSS
 - JavaScript
 
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+1. Python 3.7 or higher
+2. pip (Python package installer)
+3. PostgreSQL
+
 ## Installation
 
-1. **Clone the repository**: Clone this repository to your local machine using the command:
-```bash
-git clone https://github.com/anirudhaptiwari/Document-Integrity-Checker.git
-```
+1. **Clone the repository**: 
+   ```bash
+   git clone https://github.com/anirudhaptiwari/Document-Integrity-Checker.git
+   ```
 
-2. **Navigate to the project directory**:Use the command:
-```bash
-cd Document-Integrity-Checker
-```
-<!--3. **Create a virtual environment**: It’s a good practice to create a virtual environment for your Python projects use:
-```bash
-python3 -m venv env
-```
-4.**Activate the virtual environment**: The command to activate the virtual environment depends on your operating system:
+2. **Navigate to the project directory**:
+   ```bash
+   cd Document-Integrity-Checker
+   ```
 
-**On Windows use**
-```bash
-.\env\Scripts\activate
-```
-**On Unix or MacOS use**
-```bash
-source env/bin/activate 
-```                     -->
-3.**Install the dependencies**: The project requires Flask and its dependencies. You can install them using pip:
-```bash
-pip install flask
-```
+3. **Create a virtual environment**:
+   ```bash
+   python -m venv venv
+   ```
+
+4. **Activate the virtual environment**:
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS and Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+5. **Install the required dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. **Set up PostgreSQL**:
+   - Install PostgreSQL if you haven't already
+   - Create a new database named 'Test':
+     ```sql
+     CREATE DATABASE Test;
+     ```
+   - Create a new user and grant privileges:
+     ```sql
+     CREATE USER user WITH PASSWORD 'user';
+     GRANT ALL PRIVILEGES ON DATABASE Test TO user;
+     ```
+
+7. **Update the database URI**:
+   Open `app.py` and update the `SQLALCHEMY_DATABASE_URI` with your PostgreSQL credentials:
+   ```python
+   app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://user:user@localhost/Test'
+   ```
+
 ## Usage
 
-1. **Run the application**: You can run the application using the command:
-```bash
-python app.py
-```
-This will start the Flask development server.
+1. **Run the application**:
+   ```bash
+   python app.py
+   ```
 
-2. **Access the application**: Open web browser and navigate to
-```bash
-http://localhost:5000
-```
-This will take you to the login page of the application.
+2. **Access the application**: 
+   Open a web browser and navigate to `http://localhost:5000`
 
-4. **Use the application**: From the login page, you can log in to the application **(the default username and password are both ‘admin’)** Once logged in, you can choose to either generate a hash for a new document or check the integrity of an existing document.
+3. **Log in to the application**:
+   Use the default credentials:
+   - Username: admin
+   - Password: admin
 
+4. **Generate a hash**:
+   - Click on "Generate Hash"
+   - Upload a file and provide a unique name
+   - The application will generate and store the hash
 
-## Contribution
+5. **Check document integrity**:
+   - Click on "Check Integrity"
+   - Upload a file and provide either the unique name or the hash value
+   - The application will compare the calculated hash with the stored hash
+
+## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -78,4 +119,12 @@ Contributions are what make the open-source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+## Troubleshooting
 
+If you encounter any issues during setup or usage, please check the following:
+
+1. Ensure all dependencies are correctly installed
+2. Verify that PostgreSQL is running and the database is accessible
+3. Check that the database URI in `app.py` matches your PostgreSQL configuration
+
+If problems persist, please open an issue on the GitHub repository.
